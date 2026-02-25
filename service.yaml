@@ -5,11 +5,10 @@ metadata:
   labels:
     app: hello-world-app
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: hello-world-app
   ports:
     - name: http
       port: 8085
       targetPort: 8080
-      nodePort: 30081
