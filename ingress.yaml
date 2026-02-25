@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: hello-world-app
   annotations:
-    traefik.ingress.kubernetes.io/router.middlewares: hello-world-app@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: default-hello-world-app@kubernetescrd
 spec:
   ingressClassName: traefik
   rules:
