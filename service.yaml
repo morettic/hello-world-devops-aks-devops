@@ -10,5 +10,6 @@ spec:
     app: hello-world-app
   ports:
     - name: http
-      port: 81
+      port: 8085
       targetPort: 8080
+      nodePort: 8085
