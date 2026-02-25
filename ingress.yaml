@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-world-ingress
+  annotations:
+    traefik.ingress.kubernetes.io/router.middlewares: default-hello-world-strip@kubernetescrd
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: carlosmoretti.com.br
+      http:
+        paths:
+          - path: /hello-world
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-world-app
+                port:
+                  number: 8085
