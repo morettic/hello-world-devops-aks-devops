@@ -1,9 +1,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello-world-ingress
+  name: hhello-world-app
   annotations:
-    traefik.ingress.kubernetes.io/router.middlewares: default-hello-world-strip@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: hello-world-app@kubernetescrd
 spec:
   ingressClassName: traefik
   rules:
